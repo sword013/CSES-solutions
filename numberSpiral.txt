@@ -1,0 +1,37 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{ 
+  long t;
+  cin >> t;
+  long i,j;
+  long diag,temp;
+  while(t--){
+    cin >> i >> j;
+    
+    if(i>j) temp=i;
+    else if(i<j) temp=j;
+    else temp=i;
+   
+    diag=temp*temp-(temp-1);
+    
+    if(i==j){
+      cout << diag;
+    }
+    else if(i>j){
+      
+      if(i%2==0) cout << (diag+ (i - j));
+      else cout << (diag - (i-j));
+    }else{
+      //i<j
+      if(j%2==0) cout << (diag - (j-i));
+      else cout << (diag + (j-i));
+    }
+    cout<<endl;
+    
+  }
+  
+  return 0;
+}

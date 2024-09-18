@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    //input
+    int n;
+    cin >> n;
+    
+    int a[n];
+    for(int i=0;i<n;i++){
+      cin >> a[i];
+    }
+    
+    //problem statement
+    long totalmoves=0,currmoves;
+    
+    for(int i=1;i<n;i++){
+      if(a[i]<a[i-1]) {
+        currmoves=0;
+        currmoves+= a[i-1] - a[i];
+        a[i]+=currmoves;
+        totalmoves+=currmoves;
+      }
+    }
+    
+    
+   
+    //answer
+    cout << totalmoves;
+    
+    return 0;
+}
+
+
+/* optimal
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    long long n, x, answer = 0;
+    cin >> n;
+    long long values[n];
+    for (int i = 0; i < n; i++) {
+        cin >> values[i];
+    }
+    for (int i = 1; i < n; i++) {
+        if (values[i] < values[i - 1]) {
+            answer += (values[i - 1] - values[i]);
+            values[i] = values[i - 1];
+        }
+    }
+    cout << answer;
+}
+
+*/

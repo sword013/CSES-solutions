@@ -1,0 +1,21 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{ int n;
+  cin>> n ;
+  
+  //case 1
+  if(n==1) {cout<< n; return 0;}
+  
+  //case 2
+  if(n<=3) {cout<< "NO SOLUTION"; return 0;}
+  
+  //case 3
+  int start=n-1;  //just by observation from n=4
+  for(int i=start;i>=1;i-=2) cout << i << " ";  //if this is all even
+  for(int i=n;i>=1;i-=2) cout << i << " ";      //then is is all odd
+  
+  return 0;
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+long nC2(long n){
+  return n*(n-1)/2;
+}
+
+int main() 
+{
+    long n;
+    cin >> n;
+    long n2,n3,n4,n6,n8;
+    long answer,totalWays,totalAttackWays;
+    
+    for(long i=1;i<=n;i++){
+      //cout << "i:"<<i << "\t";
+      if(i==1) {cout <<  0 <<endl; continue;}
+      
+      totalWays =  nC2(i*i);
+      if(i==2) {cout << totalWays<<endl; continue; }
+    
+      if(i>=3){
+        n2=4;
+        n3=8;
+        n4=(i-4)*4+4;
+        n6=(i-4)*4;
+        n8=(i-4)*(i-4);
+        
+        totalAttackWays = (n2*2+n3*3+n4*4+n6*6+n8*8)/2;
+        answer = totalWays - totalAttackWays;
+        cout << answer<<endl;
+      }
+      
+      
+    }
+    return 0;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    string s;
+    cin >> s;
+    //this s can easily hold 10^6 characters
+    
+  
+    //i can be max 10^6 (inside main);
+    //as s max char = 10^6 as deifned by constraint, i= max 10^6 which 
+    //is allowed.
+    int maxCount=1, count=1;
+    char prevChar=s[0];
+    for(int i=1;i<s.size();i++){
+      if(s[i]==prevChar) {
+        count++;
+        if(count>maxCount) maxCount=count;
+      }
+      else{
+        //s[i]!=prevChar
+        count=1;
+        prevChar=s[i];
+      }
+      
+    }
+    
+    cout << maxCount;
+    
+   
+    return 0;
+}
