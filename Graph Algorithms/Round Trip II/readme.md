@@ -1,6 +1,6 @@
-# Round Trip in Byteland
+# Round Trip II
 
-## Problem Statement
+### Problem Statement
 
 Byteland has `n` cities and `m` flight connections. Your task is to design a **round trip** that:
 - Begins in a city,
@@ -39,3 +39,7 @@ If no solution exists, print `"IMPOSSIBLE"`.
 2 4
 3 2
 3 4
+```
+
+### Heres a detailed explanation of my solution:
+https://github.com/user-attachments/assets/43893802-82fe-4c34-ae27-dfc777e5f75f
