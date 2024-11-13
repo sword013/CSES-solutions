@@ -25,9 +25,10 @@ Then, there are `m` lines describing the flights. Each line has two integers `a`
 If no solution exists, print `"IMPOSSIBLE"`.
 
 ### Constraints
-- `1 \le n \le 10^5`
-- `1 \le m \le 2 \cdot 10^5`
-- `1 \le a, b \le n`
+- 1 ≤ n ≤ 100,000
+- 1 ≤ m ≤ 200,000
+- 1 ≤ a, b ≤ n
+
 
 ### Example
 
